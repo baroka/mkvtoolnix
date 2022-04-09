@@ -1,3 +1,4 @@
+```shell
 Docker image for monitoring a folder and launch custom MKVToolNix script. 
 
 PREREQUISITES
@@ -24,3 +25,4 @@ INSTALLATION
       - GROUP_ID=$PUID 
 
  - $DOCKERDIR points to your local path for script files
+```
