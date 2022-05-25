@@ -1,6 +1,6 @@
 #!/bin/sh
 # Entrypoint for mkvtoolnix
-echo "init.."
+echo "mkvtoolnix start.."
 
 # Monitorize video folder
 inotifywait -m -r -e create,moved_to /home/video --includei "\.mkv$" --format %w%f | while read line; do
