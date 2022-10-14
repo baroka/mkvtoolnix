@@ -14,7 +14,8 @@ RUN apk update && apk add --no-cache inotify-tools mkvtoolnix jq
 
 # Timezone
 RUN apk update && apk add tzdata
-ENV TZ=Europe/Madrid
+ARG TZ "Europe/Madrid"
+ENV TZ=$TZ
 RUN cp /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 
 # Create folders
