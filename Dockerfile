@@ -10,7 +10,8 @@ COPY entrypoint.sh .
 RUN chmod a+x entrypoint.sh
 
 # Install packages
-RUN apk update && apk add --no-cache inotify-tools mkvtoolnix jq
+RUN apk update && apk add --no-cache inotify-tools mkvtoolnix jq && \
+    rm -rf /tmp/*
 
 # Timezone
 RUN apk update && apk add tzdata
